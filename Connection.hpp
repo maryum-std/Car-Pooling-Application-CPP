@@ -1,14 +1,15 @@
 #pragma once
 
-#include<iostream>
-#include<string>
-#include<map>
+#include <stdio.h>
+#include <string.h>
 
-//class holding method for connecting to the server
-class Connect
-{
-public:
-	//method declaration for establishing network connection with the server
-	std::string connection(std::map<std::string, std::string> dataMap);
-};
+// Define a struct for holding server connection data
+typedef struct {
+    char serverName[50];
+    char port[10];
+} ServerData;
+
+// Function declaration for establishing a network connection with the server
+void connection(ServerData dataMap);
+
 
